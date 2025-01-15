@@ -13,11 +13,14 @@ body {
   left: 0;
   bottom: 0;
   background: #021124;
-  overflow-y: auto; /* gera scroll eixo y e não deixa cortar imagem */
+  overflow-y: auto;
+  /* gera scroll eixo y e não deixa cortar imagem */
   width: 300px;
-  transition: all ease-in-out 0.5s; /*mantém configuração ao esconder e voltar menu */
+  transition: all ease-in-out 0.5s;
+  /*mantém configuração ao esconder e voltar menu de forma suave */
   padding: 0 15px;
-  z-index: 9997; /*sobrepõe a qualquer item da tela */
+  z-index: 9997;
+  /*sobrepõe a qualquer item da tela */
 }
 
 #header .profile img {
@@ -32,7 +35,8 @@ body {
   font-size: 24px;
   margin: 0;
   padding: 0;
-  font-weight: 600; /*peso*/
+  font-weight: 600;
+  /*peso*/
   text-align: center;
   color: #fff;
 }
@@ -75,7 +79,7 @@ body {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover > a {
+.nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
@@ -83,7 +87,7 @@ body {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover > a i {
+.nav-menu li:hover>a i {
   color: #149ddd;
 }
 
@@ -99,17 +103,18 @@ section#inicio {
   background-position: center;
 
   width: 100%;
-  height: 100vh; /*ocupa tamanho total tela*/
+  height: 100vh;
+  /*ocupa tamanho total tela*/
 }
 
+/* html comentado
 section#inicio h2 {
-  font-size: 4.2rem; /*thi: 6rem*/
-}
+  font-size: 4.2rem; thi: 6rem}*/
 
+/* html comentado
 section#inicio span#subtitle {
   margin-right: 8rem;
-  font-size: 4rem; /*thi: 1.5*/
-}
+  font-size: 4rem; thi: 1.5}*/
 
 .text-shadow {
   text-shadow: 4px 4px 10px #000000;
@@ -132,11 +137,47 @@ i.menu-mobile {
   top: 1rem;
   font-size: 1.5rem;
   border-radius: 4rem;
+  /* forma arredondada*/
   cursor: pointer;
+  /* exibe cursor forma mão*/
   z-index: 10;
+  /*acima de tudo */
   width: 45px;
   height: 45px;
-  display: flex;
+  display: none;
+  /*none: esconde - flex: exibe*/
   justify-content: center;
   align-items: center;
+}
+
+.menu-nav-active {
+  overflow: hidden;
+}
+
+.menu-nav-active #header {
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    left: -300px
+  }
+
+  i.menu-mobile {
+    display: flex
+      /*padrão: none (acima 1024px)*/
+  }
+
+  /* html comentado
+  section#inicio h2 {
+    font-size: 2.5rem; thi: 3.5rem}*/
+
+  /* html comentado
+  section#inicio span#subtitle {
+    margin-right: 8rem;
+    font-size: 2rem; }*/
+
+  #main {
+    margin-left: 0;
+  }
 }
