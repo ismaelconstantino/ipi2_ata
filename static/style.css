@@ -129,6 +129,10 @@ section#inicio div#arraste a {
   color: #fff;
 }
 
+section#sobre div#conselho h4 {
+  text-align: center;
+}
+
 i.menu-mobile {
   position: fixed;
   color: #fff;
@@ -195,4 +199,24 @@ i.menu-mobile {
 *::-webkit-scrollbar-thumb {
   background-color: #252c90;
   border-radius: 10%;
+}
+
+.section-bg {
+  background: #dff5aa;
+}
+
+section#sobre div#conselho h4 {
+  text-align: center;
+}
+
+section#sobre div#diaconal h4 {
+  text-align: center;
+}
+
+section#horario div#culto h4 {
+  text-align: center;
+}
+
+section#horario div#estudo h4 {
+  text-align: center;
 }
